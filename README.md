@@ -12,14 +12,23 @@ Made by **DevKit Club**. Free to use and adapt under the [MIT license](LICENSE).
 
 ## Choose your starter
 
-| Your project | Workflow to copy | Setup guide |
-| --- | --- | --- |
-| Python with pip and pytest | [python/ci.yml](python/ci.yml) | [Python setup](docs/python.md) |
-| JavaScript with npm and a test script | [javascript/ci.yml](javascript/ci.yml) | [JavaScript setup](docs/javascript.md) |
+| Your project | Workflow to copy | Destination in your project | Setup guide |
+| --- | --- | --- | --- |
+| Python with pip and pytest | [python/ci.yml](python/ci.yml) | `.github/workflows/python-ci.yml` | [Python setup](docs/python.md) |
+| JavaScript with npm and a test script | [javascript/ci.yml](javascript/ci.yml) | `.github/workflows/javascript-ci.yml` | [JavaScript setup](docs/javascript.md) |
 
 Place your chosen workflow in `.github/workflows/` **inside your own project**. Do not copy this repository's maintenance workflows.
 
 Then copy one file from [dependabot/](dependabot/) to `.github/dependabot.yml`. [Dependency-update setup](docs/dependabot.md) explains which one to choose.
+
+## Quick start
+
+1. **Check your project locally.** Python: run `python -m pip install -r requirements.txt -r requirements-dev.txt`, then `python -m pytest`. JavaScript: run `npm ci`, then `npm test`. See the prerequisites below before running these commands.
+2. **Copy the matching workflow.** In your project's GitHub repository, choose **Add file → Create new file**, enter the destination from the table above, and paste the entire template. Review the runtime version and dependency filenames. If a workflow already exists at that path, review and merge the configuration rather than replacing it blindly.
+3. **Commit and check Actions.** Commit the file and open your project's **Actions** tab. A passing run means the tests passed; open a failed run to inspect the error. Open a pull request to confirm the check appears there too.
+4. **Optionally add dependency updates.** Copy the matching Dependabot config to `.github/dependabot.yml` on your default branch. Merge entries if that file already exists. Review the update PRs before merging them.
+
+No account with DevKit Club, API key, or additional service is required. The workflow runs in your own GitHub repository. GitHub Actions must be enabled and allowed by your repository or organization; private-repository usage follows your GitHub plan's allowance and billing settings.
 
 ## What you get
 
@@ -36,7 +45,7 @@ Then copy one file from [dependabot/](dependabot/) to `.github/dependabot.yml`. 
 
 **JavaScript:** a committed `package-lock.json` matching `package.json`, and a non-interactive `npm test` script. Yarn, pnpm, workspaces, Poetry, uv, service containers, publishing, and deployment need additional configuration outside this starter's scope.
 
-These workflows run tests you already have; they do not generate tests or guarantee your application is correct. They do not configure required checks or automatically merge dependency updates.
+These workflows run tests you already have; they do not generate tests or guarantee your application is correct. They do not configure required checks, deploy your application, publish packages, or automatically merge dependency updates. They target GitHub-hosted Ubuntu runners; self-hosted runners need separate compatibility checks.
 
 ## Try the examples
 
