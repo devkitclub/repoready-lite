@@ -2,6 +2,10 @@
 
 **Free CI starter workflows for Python and JavaScript.**
 
+[![Python CI example](https://github.com/devkitclub/repoready-lite/actions/workflows/python-example.yml/badge.svg)](https://github.com/devkitclub/repoready-lite/actions/workflows/python-example.yml)
+[![JavaScript CI example](https://github.com/devkitclub/repoready-lite/actions/workflows/javascript-example.yml/badge.svg)](https://github.com/devkitclub/repoready-lite/actions/workflows/javascript-example.yml)
+[![Validate templates](https://github.com/devkitclub/repoready-lite/actions/workflows/validate.yml/badge.svg)](https://github.com/devkitclub/repoready-lite/actions/workflows/validate.yml)
+
 Get your existing tests running on GitHub whenever you push code or open a pull request. Copy a workflow, add a dependency-update config, and keep building.
 
 Made by **DevKit Club**. Free to use and adapt under the [MIT license](LICENSE).
@@ -42,8 +46,8 @@ For repository contributors, the live example workflows are generated from the d
 
 ## Status
 
-Initial starter pack. Local example tests and configuration checks are documented in [validation](docs/validation.md). GitHub-hosted execution must be confirmed after the repository is published; there is no hosted CI result yet.
+Initial starter pack, published on GitHub. Python, JavaScript, and template-validation workflows passed on GitHub-hosted runners on 2026-10-10. See [validation](docs/validation.md) for run links, local test results, and remaining checks.
 
 ## What's next at DevKit Club?
 
-RepoReady Lite is the free starting point. An advanced CI and release collection is planned; it is not available for purchase yet. If this starter helps, star or watch the repository when it is published, and open an issue with the setup that slowed you down.
+RepoReady Lite is the free starting point. An advanced CI and release collection is planned; it is not available for purchase yet. If this starter helps, star or watch the repository, and open an issue with the setup that slowed you down.

@@ -15,8 +15,18 @@ Local checks performed on 2026-10-10 using Python 3.12.14, pytest 8.4.2, Node.js
 
 The deliberately failing tests were created only in temporary copies and are not part of the examples.
 
-## Still to verify after publication
+## GitHub-hosted verification
 
-GitHub-hosted Actions execution, action downloads, cache restore/save behavior, fork-PR behavior, and Dependabot scheduling have not run against a published repository. Local validation does not emulate the GitHub runner or replace its validation. Test both examples on GitHub before announcing a validated release.
+The initial implementation commit `dd5e9f2c7861daab931853801b3820e44d34a8ba` passed all three workflows on GitHub-hosted runners on 2026-10-10:
+
+- [Python CI example — passed](https://github.com/devkitclub/repoready-lite/actions/runs/38073343600)
+- [JavaScript CI example — passed](https://github.com/devkitclub/repoready-lite/actions/runs/38073343547)
+- [Validate templates — passed](https://github.com/devkitclub/repoready-lite/actions/runs/38073343601)
+
+These runs exercised action downloads and the complete installation/test workflows. Dependabot has also started its initial update jobs.
+
+## Remaining checks
+
+Repeat-run cache hits, fork-PR behavior, and the next scheduled weekly Dependabot run have not been separately verified. Local failing-test probes confirm the test commands return a failure; deliberate failing-test PRs have not been run on GitHub.
 
 The two standalone example repositories have not been created; this pack includes their source directories and setup instructions.
