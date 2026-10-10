@@ -1,0 +1,14 @@
+{
+  "name": "repoready-lite-javascript-example",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A minimal npm project demonstrating RepoReady Lite CI",
+  "scripts": {
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "license": "MIT"
+}
